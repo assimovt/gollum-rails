@@ -1,0 +1,5 @@
+%h3 Table of contents
+
+%ul
+  - Page.all.each do |page|
+    = content_tag(:li, page.name)

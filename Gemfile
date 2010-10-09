@@ -5,6 +5,7 @@ gem 'rails', '3.0.0'
 gem 'mysql2'
 gem 'haml', '~> 3.0.21'
 gem 'gollum'
+gem 'RedCloth'
 
 group :development do
   gem 'rails3-generators'

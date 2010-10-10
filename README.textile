@@ -12,27 +12,27 @@ A sample app to try out a Wiki engine. The following tools are used:
 
 h2. Getting started
 
-# Create a Git repository for the wiki:
+* Create a Git repository for the wiki:
 
 ```git init --bare db/wiki.git```
 
-# Get Gem dependencies:
+* Get Gem dependencies:
 
 ```bundle install```
 
-# Setup the database config:
+* Setup the database config:
 
 ```cp config/database.yml.sample config/database.yml```
 
-# Create the database:
+* Create the database:
 
 ```rake db:create```
 
-# Run database migrations:
+* Run database migrations:
 
 ```rake db:migrate```
 
-# Finally start an app and check it out at http://localhost:3000:
+* Finally start an app and check it out at http://localhost:3000:
 
 ```rails s```
 

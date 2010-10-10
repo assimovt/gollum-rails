@@ -9,7 +9,7 @@ class CreatePages < ActiveRecord::Migration
     end
     
     # Create parent Welcome page
-    Page.create(:name => 'Welcome', '')
+    Page.create(:name => 'Welcome', :body => 'Initial commit')
     
   end
 

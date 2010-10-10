@@ -1,5 +1,3 @@
 %h3 Table of contents
 
-%p= link_to 'New Page', new_page_path
-
-%ul#pages_list= render :partial => 'pages/item', :collection => Page.all
+%ul#pages_list= render Page.root

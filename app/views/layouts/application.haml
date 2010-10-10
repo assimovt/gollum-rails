@@ -7,7 +7,9 @@
     = include_javascripts :common
     = csrf_meta_tag
   %body
-    #flash_notice{:style => 'display:none;'}= flash[:notice]
-    = render :partial => 'pages/index'
-    = yield
+    #container
+      #flash_notice{:style => 'display:none;'}= flash[:notice]
+      
+      #toc.span-12= render :partial => 'pages/index'
+      #content.span-12.last= yield
     

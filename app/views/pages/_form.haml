@@ -11,6 +11,8 @@
     = f.label :url
     = f.text_field :url
     
-  .actions= f.submit
+  .actions
+    = f.submit
+    = cancel_link
   
   = raw(textile_editor_initialize(:framework => :jquery))

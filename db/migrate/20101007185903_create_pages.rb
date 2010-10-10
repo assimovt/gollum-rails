@@ -3,13 +3,17 @@ class CreatePages < ActiveRecord::Migration
     create_table :pages do |t|
       t.string :name
       t.string :url
-      t.integer :parent_id, :default => 0
+      t.integer :parent_id
+      t.integer :lft
+      t.integer :rgt
 
       t.timestamps
     end
     
+    add_index :pages, :parent_id
+    
     # Create parent Welcome page
-    Page.create(:name => 'Welcome', :body => 'Initial commit')
+    Page.create(:name => 'Welcome', :body => 'Getting started guide')
     
   end
 

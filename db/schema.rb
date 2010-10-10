@@ -15,7 +15,9 @@ ActiveRecord::Schema.define(:version => 20101007185903) do
   create_table "pages", :force => true do |t|
     t.string   "name"
     t.string   "url"
-    t.integer  "parent_id",  :default => 0
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

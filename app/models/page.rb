@@ -1,5 +1,7 @@
 class Page < ActiveRecord::Base
   
+  acts_as_nested_set
+  
   # Temporarily hard coded
   FORMAT = :textile
   COMMIT = {:message => 'Test commit', :name => 'Test author', :email => 'test@test.com'}
@@ -21,7 +23,7 @@ class Page < ActiveRecord::Base
   end
   
   def self.welcome
-    Page.first(:conditions => {:parent_id => 0})
+    Page.first(:conditions => {:name => 'Welcome'})
   end
   
   private
@@ -35,7 +37,7 @@ class Page < ActiveRecord::Base
   end
   
   def create_page
-    wiki.write_page(name, FORMAT, body, COMMIT)
+    wiki.write_page(name, FORMAT, body || '', COMMIT)
   end
   
   def update_page

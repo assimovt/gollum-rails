@@ -1,0 +1,12 @@
+#content {
+  text-align:left;
+  padding: 15px;
+}
+
+#toc {
+  text-align:left;
+  width: 300px;
+  background-color: #ccc;
+  min-height: 600px;
+  padding: 15px;
+}

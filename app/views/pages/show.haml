@@ -1,5 +1,10 @@
+%h4
+  = "Page name: #{@page.name}"
+  = link_to '(Edit)', edit_page_path(@page)
+  = link_to '(Destroy)', @page, :remote => true, :confirm => 'Are you sure?', :method => :delete
+
 %hr
-= "Page name: #{@page.name}"
-%hr
-= raw @page.content
+
+= raw(@page.content)
+
 %hr

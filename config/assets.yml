@@ -9,4 +9,9 @@ javascripts:
 
 stylesheets:
   common:
-    - public/stylesheets/*.css
+    - public/stylesheets/screen.css
+    - public/stylesheets/textile-editor.css
+    - public/stylesheets/ie.css
+    - public/stylesheets/application.css
+  print:
+    - public/stylesheets/print.css

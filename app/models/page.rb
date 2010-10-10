@@ -39,7 +39,7 @@ class Page < ActiveRecord::Base
   end
   
   def update_page
-    wiki.update_page(page, name, FORMAT, body, COMMIT)
+    wiki.update_page(page, name, FORMAT, body || self.raw_content, COMMIT)
   end
   
   def delete_page

@@ -1,6 +1,6 @@
 Sodoc::Application.routes.draw do
   
-  resources :pages, :except => [:new, :index]
+  resources :pages, :except => [:index]
   root :to => "pages#show"
   
   # The priority is based upon order of creation:

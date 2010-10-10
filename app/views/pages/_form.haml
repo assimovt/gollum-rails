@@ -1,0 +1,16 @@
+= form_for(@page) do |f|
+
+  %p
+    = f.label :name
+    = f.text_field :name
+    
+  %p
+    = f.textile_editor :body
+
+  %p
+    = f.label :url
+    = f.text_field :url
+    
+  .actions= f.submit
+  
+  = raw(textile_editor_initialize(:framework => :jquery))

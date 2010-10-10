@@ -1,0 +1,5 @@
+<% unless @page.errors.any? -%>
+  $("#flash_notice").html("<%= escape_javascript(flash[:notice])%>");
+  $("#flash_notice").show(300);
+  $("#<%= dom_id(@page)%>").fadeOut('fast');
+<% end -%>

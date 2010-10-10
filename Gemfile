@@ -6,6 +6,8 @@ gem 'mysql2'
 gem 'haml', '~> 3.0.21'
 gem 'gollum'
 gem 'RedCloth'
+gem 'ajaxlibs'
+gem 'jammit'
 
 group :development do
   gem 'rails3-generators'

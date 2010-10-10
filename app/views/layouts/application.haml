@@ -2,9 +2,12 @@
 %html
   %head
     %title Socdoc
-    = stylesheet_link_tag :all
-    = javascript_include_tag :defaults
+    = raw ajaxlibs_include :jquery
+    = include_stylesheets :common
+    = include_javascripts :common
     = csrf_meta_tag
   %body
+    #flash_notice{:style => 'display:none;'}= flash[:notice]
     = render :partial => 'pages/index'
     = yield
+    

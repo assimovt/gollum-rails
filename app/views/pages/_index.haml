@@ -1,5 +1,5 @@
 %h3 Table of contents
 
-%ul
-  - Page.all.each do |page|
-    = content_tag(:li, page.name)
+%p= link_to 'New Page', new_page_path
+
+%ul#pages_list= render :partial => 'pages/item', :collection => Page.all

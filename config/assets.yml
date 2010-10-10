@@ -1,0 +1,12 @@
+embed_assets: on
+
+javascripts:
+  common:
+    - public/javascripts/textile-editor.js         # Must be loaded before textile-editor-config.js
+    - public/javascripts/textile-editor-config.js
+    - public/javascripts/rails.js
+    - public/javascripts/application.js
+
+stylesheets:
+  common:
+    - public/stylesheets/*.css

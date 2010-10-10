@@ -4,7 +4,6 @@ class Page < ActiveRecord::Base
   
   # Temporarily hard coded
   FORMAT = :textile
-  COMMIT = {:message => 'Test commit', :name => 'Test author', :email => 'test@test.com'}
   WIKI   = Rails.root.join("db", "wiki.git")
   
   
@@ -12,7 +11,7 @@ class Page < ActiveRecord::Base
   before_update  :update_page
   before_destroy :delete_page 
   
-  attr_accessor :body
+  attr_accessor :body, :change_comment
   
   def content
     page.formatted_data
@@ -26,6 +25,19 @@ class Page < ActiveRecord::Base
     Page.first(:conditions => {:name => 'Welcome'})
   end
   
+  def author
+    page.version.author.name
+  end
+
+  def date
+    page.version.authored_date
+  end
+  
+  def preview(data)
+    wiki.preview_page('Preview', data, FORMAT).formatted_data
+  end
+  
+  
   private
   
   def wiki
@@ -37,11 +49,11 @@ class Page < ActiveRecord::Base
   end
   
   def create_page
-    wiki.write_page(name, FORMAT, body || '', COMMIT)
+    wiki.write_page(name, FORMAT, body || '', {:message => self.change_comment, :name => 'tester', :author => 'tester'})
   end
   
   def update_page
-    wiki.update_page(page, name, FORMAT, body || self.raw_content, COMMIT)
+    wiki.update_page(page, name, FORMAT, body || self.raw_content, {:message => self.change_comment, :name => 'tester', :author => 'tester'})
   end
   
   def delete_page

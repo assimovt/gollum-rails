@@ -1,7 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   
-  after_filter :store_location
+  before_filter :instantiate_controller_and_action_names
+  after_filter  :store_location
+  
   
   def get_layout
     request.xhr? ? nil : 'application'
@@ -17,9 +19,13 @@ class ApplicationController < ActionController::Base
   private
   
   def store_location
-    session[:return_to] = request.fullpath
+    session[:return_to] = request.fullpath unless request.xhr?
   end
-  
+
+  def instantiate_controller_and_action_names
+    @current_action = action_name
+    @current_controller = controller_name
+  end
 
 end
 

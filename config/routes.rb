@@ -1,6 +1,10 @@
 Sodoc::Application.routes.draw do
   
-  resources :pages, :except => [:index]
+  resources :pages, :except => [:index] do
+    member do
+      post 'preview'
+    end
+  end
   root :to => "pages#show"
   
   # The priority is based upon order of creation:

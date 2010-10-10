@@ -40,6 +40,10 @@ class PagesController < ApplicationController
     flash[:notice] = "Successfully destroyed page."
   end
   
+  def preview
+    render :text => @page.preview(params[:data])
+  end
+  
   private
   
   def find_page

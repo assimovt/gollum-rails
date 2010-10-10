@@ -3,13 +3,17 @@
   %p
     = f.label :name
     = f.text_field :name
-    
+  
   %p
-    = f.textile_editor :body
-
+    = link_to 'Edit mode', '#', :id => 'write'
+    = link_to 'Preview mode', preview_page_path(@page), :id => 'preview'
+    #write_area
+      = f.textile_editor :body
+    #preview_area.hide
+  
   %p
-    = f.label :url
-    = f.text_field :url
+    = f.label 'Describe this change (optional)'
+    = f.text_field :change_comment
     
   .actions
     = f.submit

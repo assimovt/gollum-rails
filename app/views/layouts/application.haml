@@ -6,7 +6,7 @@
     = include_stylesheets :common
     = include_javascripts :common
     = csrf_meta_tag
-  %body
+  %body{:id => bodytag_id}
     #container
       #flash_notice{:style => 'display:none;'}= flash[:notice]
       

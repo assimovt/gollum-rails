@@ -1,12 +1,24 @@
 #content {
   text-align:left;
   padding: 15px;
+  overflow: auto;
+  font-size: 1.2em;
 }
 
 #toc {
   text-align:left;
   width: 300px;
-  background-color: #ccc;
+  background-color: #f0f0ee;
   min-height: 600px;
   padding: 15px;
+  overflow: auto;
+}
+
+#toc a {
+  font-size: 1.3em;
+}
+
+#toc ul {
+  list-style-type: none;
+  margin-left: -30px;
 }

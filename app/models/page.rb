@@ -1,7 +1,10 @@
 class Page < ActiveRecord::Base
   
+  # Temporarily hard coded
   FORMAT = :textile
   COMMIT = {:message => 'Test commit', :name => 'Test author', :email => 'test@test.com'}
+  WIKI   = Rails.root.join("db", "wiki.git")
+  
   
   before_create  :create_page
   before_update  :update_page
@@ -24,7 +27,7 @@ class Page < ActiveRecord::Base
   private
   
   def wiki
-    @@golum ||= Gollum::Wiki.new(Rails.root.join("tmp", "pages.git"))
+    @@golum ||= Gollum::Wiki.new(WIKI)
   end
   
   def page

@@ -7,6 +7,10 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps
     end
+    
+    # Create parent Welcome page
+    Page.create(:name => 'Welcome', '')
+    
   end
 
   def self.down

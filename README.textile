@@ -39,3 +39,8 @@ h2. Getting started
 h2. TODO
 
 * Testing with Factory_girl, Shoulda
+
+
+h2. Copyright
+
+Tair Assimov &copy; 2010

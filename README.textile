@@ -22,8 +22,7 @@ h2. Getting started
 
 # Setup the database:
 
-```
-cp config/database.yml.sample config/database.yml
+```cp config/database.yml.sample config/database.yml
 rake db:create
 rake db:migrate
 ```

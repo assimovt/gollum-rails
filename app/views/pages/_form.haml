@@ -5,8 +5,9 @@
     = f.text_field :name
   
   %p
-    = link_to 'Edit mode', '#', :id => 'write'
-    = link_to 'Preview mode', preview_page_path(@page), :id => 'preview'
+    - unless @page.new_record?
+      = link_to 'Edit mode', '#', :id => 'write'
+      = link_to 'Preview mode', preview_page_path(@page), :id => 'preview'
     #write_area
       = f.textile_editor :body
     #preview_area.hide

@@ -26,7 +26,7 @@ class Page < ActiveRecord::Base
   end
   
   def author
-    page.version.author.name
+    page.version.author.name.gsub(/<>/, '')
   end
 
   def date

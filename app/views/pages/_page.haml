@@ -1,9 +1,7 @@
-- html_id = dom_id(page)
-
-%li{:id => html_id, :class => "level_#{page.level}"}
+%li{:id => dom_id(page), :class => "level_#{page.level}"}
   
   = link_to page.name, page_path(page)
-  = link_to '(Add)', new_page_path, :rel => html_id
+  = link_to '(Add)', new_page_path, :rel => dom_id(page)
   
   - unless page.children.empty?
     %ul= render page.children

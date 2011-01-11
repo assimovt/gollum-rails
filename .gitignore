@@ -4,3 +4,4 @@ log/*.log
 tmp/**/*
 db/wiki.git
 config/database.yml
+*.tmproj

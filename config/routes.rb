@@ -1,4 +1,4 @@
-Sodoc::Application.routes.draw do
+Gollum::Application.routes.draw do
   
   resources :pages, :except => [:index] do
     member do

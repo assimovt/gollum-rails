@@ -40,6 +40,7 @@ h2. TODO
 
 * Testing with Factory_girl, Shoulda
 * Upgrade to rails 3.0.3
+* Functional tests for creating pages
 
 h2. Copyright
 

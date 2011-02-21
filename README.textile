@@ -44,4 +44,4 @@ h2. TODO
 
 h2. Copyright
 
-Tair Assimov &copy; 2010
+Tair Assimov &copy; 2011

@@ -2,6 +2,8 @@ h1. Sample Wiki application
 
 A sample app to try out a Wiki engine. The following tools are used:
 
+* Ruby 1.9.2
+
 * Gollum   - A git powered Wiki engine, also used in GitHub
 * Rails 3  - Latest Rails to provide a frontend for an application
 * Bundler  - Gem packages manager
@@ -36,12 +38,12 @@ h2. Getting started
 
 ```rails s```
 
+
 h2. TODO
 
 * Testing with Factory_girl, Shoulda
-* Upgrade to rails 3.0.3
-* Upgrade Gollum to 1.1.1
+* Fix table of contents hierarchy (parent_id is not set for awesome_nested_set gem)
 
 h2. Copyright
 
-Tair Assimov &copy; 2010
+Tair Assimov &copy; 2010-2011

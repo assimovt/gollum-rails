@@ -44,6 +44,3 @@ h2. TODO
 * Testing with Factory_girl, Shoulda
 * Fix table of contents hierarchy (parent_id is not set for awesome_nested_set gem)
 
-h2. Copyright
-
-Tair Assimov &copy; 2010-2011

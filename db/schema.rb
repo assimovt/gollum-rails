@@ -22,4 +22,6 @@ ActiveRecord::Schema.define(:version => 20101007185903) do
     t.datetime "updated_at"
   end
 
+  add_index "pages", ["parent_id"], :name => "index_pages_on_parent_id"
+
 end

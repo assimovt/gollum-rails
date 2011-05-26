@@ -1,17 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
+gem 'rails', '3.0.7'
 
-gem 'mysql2'
-gem 'haml', '~> 3.0.21'
-gem 'gollum'
+gem 'mysql2', '~> 0.2.3'
+gem 'haml', '~> 3.1.1'
+gem 'gollum', '~> 1.3.0'
 gem 'RedCloth'
 gem 'ajaxlibs'
 gem 'jammit'
+gem 'awesome_nested_set'
 
 group :development do
   gem 'rails3-generators'
-  gem 'mongrel'
+  gem 'mongrel', '1.2.0.pre2'
 end
 
 group :test do

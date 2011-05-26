@@ -6,8 +6,7 @@
   = link_to '(Edit)', edit_page_path(@page)
   = link_to '(Destroy)', @page, :remote => true, :confirm => 'Are you sure?', :method => :delete
   
-  %small
-    = "Last edited by #{@page.author} #{time_ago_in_words(@page.date)} ago."
+  %small= "Last edited by #{@page.author} #{time_ago_in_words(@page.date)} ago."
 
 %hr
 

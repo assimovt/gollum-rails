@@ -9,12 +9,12 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps
     end
-    
+
     add_index :pages, :parent_id
-    
+
     # Create parent Welcome page
     Page.create(:name => 'Welcome', :body => 'Getting started guide')
-    
+
   end
 
   def self.down

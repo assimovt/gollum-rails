@@ -3,7 +3,7 @@
   %p
     = f.label :name
     = f.text_field :name
-  
+
   %p
     - unless @page.new_record?
       = link_to 'Edit mode', '#', :id => 'write'
@@ -11,13 +11,13 @@
     #write_area
       = f.textile_editor :body
     #preview_area.hide
-  
+
   %p
     = f.label 'Describe this change (optional)'
     = f.text_field :change_comment
-    
+
   .actions
     = f.submit
     = cancel_link
-  
+
   = raw(textile_editor_initialize(:framework => :jquery))

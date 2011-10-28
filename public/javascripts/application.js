@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  
+
   if ($('#pages_edit').length) {
 
     $('a#preview').click(function() {
@@ -14,10 +14,10 @@ $(document).ready(function() {
       $('#preview_area').hide();
       return false;
     });
-    
+
   }
-  
-  
-  
-  
+
+
+
+
 });

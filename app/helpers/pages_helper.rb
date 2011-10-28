@@ -1,5 +1,5 @@
 module PagesHelper
-  
+
   def breadcrumbs(page)
     s = []
     page.ancestors.each do |p|
@@ -7,5 +7,5 @@ module PagesHelper
     end
     raw(s.join(' '))
   end
-  
+
 end

@@ -9,7 +9,6 @@
   %body{:id => bodytag_id}
     #container
       #flash_notice{:style => 'display:none;'}= flash[:notice]
-      
+
       #toc.span-12= render :partial => 'pages/index'
       #content.span-12.last= yield
-    
